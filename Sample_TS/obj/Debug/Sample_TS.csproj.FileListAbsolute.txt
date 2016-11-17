@@ -1,0 +1,6 @@
+C:\Users\角涼太朗\Documents\GitHub\Sample_TS\Sample_TS\bin\Debug\Sample_TS.exe.config
+C:\Users\角涼太朗\Documents\GitHub\Sample_TS\Sample_TS\obj\Debug\Sample_TS.csprojResolveAssemblyReference.cache
+C:\Users\角涼太朗\Documents\GitHub\Sample_TS\Sample_TS\bin\Debug\Sample_TS.exe
+C:\Users\角涼太朗\Documents\GitHub\Sample_TS\Sample_TS\bin\Debug\Sample_TS.pdb
+C:\Users\角涼太朗\Documents\GitHub\Sample_TS\Sample_TS\obj\Debug\Sample_TS.exe
+C:\Users\角涼太朗\Documents\GitHub\Sample_TS\Sample_TS\obj\Debug\Sample_TS.pdb
