@@ -1,4 +1,4 @@
-# TeacherSercher
+# TeacherSearcher
 課題のプロトタイプ兼C#練習<br>
 
 # 概要
