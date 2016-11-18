@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace TeacherSercher
+namespace TeacherSearcher
 {
-	class TacherSwitch : Form
+	class TeacherSwitch : Form
 	{
 		public bool isExist { get; set; }
 
 		public delegate void RefreshEventHandler( object sender, EventArgs e );
 		public event RefreshEventHandler RefreshEvent;
 
-		public TacherSwitch()
+		public TeacherSwitch()
 		{
 			this.Text = "TacherSwitch";
 			this.Width = 200;

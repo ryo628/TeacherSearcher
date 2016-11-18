@@ -1,21 +1,21 @@
 ﻿using System;
 using System.Windows.Forms;
-using TeacherSercher;
+using TeacherSearcher;
 
-namespace TeacherSercher
+namespace TeacherSearcher
 {
-	class TacherSercher : Form
+	class TeacherSearcher : Form
 	{
-		private TacherSwitch ts;
+		private TeacherSwitch ts;
 		private StudentSwitch ss;
 		private bool isExist { get; set; }
 
 		public static void Main()
 		{
-			Application.Run( new TacherSercher() );
+			Application.Run( new TeacherSearcher() );
 		}
 
-		public TacherSercher()
+		public TeacherSearcher()
 		{
 			this.Text = "TeacherSearcher";
 			this.Width = 500;
@@ -27,7 +27,7 @@ namespace TeacherSercher
 			lb1.Parent = this;
 
 			// 教授側スイッチ
-			ts = new TacherSwitch();
+			ts = new TeacherSwitch();
 			ts.isExist = this.isExist;
 			ts.RefreshEvent += delegate ( object sender, EventArgs e )
 								{

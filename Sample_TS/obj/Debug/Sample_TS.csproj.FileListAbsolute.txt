@@ -4,3 +4,9 @@ C:\Users\角涼太朗\Documents\GitHub\Sample_TS\Sample_TS\bin\Debug\Sample_TS.e
 C:\Users\角涼太朗\Documents\GitHub\Sample_TS\Sample_TS\bin\Debug\Sample_TS.pdb
 C:\Users\角涼太朗\Documents\GitHub\Sample_TS\Sample_TS\obj\Debug\Sample_TS.exe
 C:\Users\角涼太朗\Documents\GitHub\Sample_TS\Sample_TS\obj\Debug\Sample_TS.pdb
+C:\Users\ryoki_000\Documents\GitHub\TeacherSercher\Sample_TS\bin\Debug\Sample_TS.exe.config
+C:\Users\ryoki_000\Documents\GitHub\TeacherSercher\Sample_TS\bin\Debug\Sample_TS.exe
+C:\Users\ryoki_000\Documents\GitHub\TeacherSercher\Sample_TS\bin\Debug\Sample_TS.pdb
+C:\Users\ryoki_000\Documents\GitHub\TeacherSercher\Sample_TS\obj\Debug\Sample_TS.csprojResolveAssemblyReference.cache
+C:\Users\ryoki_000\Documents\GitHub\TeacherSercher\Sample_TS\obj\Debug\Sample_TS.exe
+C:\Users\ryoki_000\Documents\GitHub\TeacherSercher\Sample_TS\obj\Debug\Sample_TS.pdb
