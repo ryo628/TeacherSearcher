@@ -36,9 +36,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StudentSwitch.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Teacher.cs" />
     <Compile Include="TeacherSercher.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -9,3 +9,4 @@ C:\Users\ryoki_000\Documents\GitHub\TeacherSercher\Sample_TS\bin\Debug\Sample_TS
 C:\Users\ryoki_000\Documents\GitHub\TeacherSercher\Sample_TS\bin\Debug\Sample_TS.pdb
 C:\Users\ryoki_000\Documents\GitHub\TeacherSercher\Sample_TS\obj\Debug\Sample_TS.exe
 C:\Users\ryoki_000\Documents\GitHub\TeacherSercher\Sample_TS\obj\Debug\Sample_TS.pdb
+C:\Users\ryoki_000\Documents\GitHub\TeacherSercher\Sample_TS\obj\Debug\Sample_TS.csprojResolveAssemblyReference.cache
