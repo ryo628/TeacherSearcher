@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using TeacherSearcher;
 
 namespace TeacherSearcher
 {
 	class TeacherSearcher : Form
 	{
-		List<Teacher> teacher;
 		List<TeacherSwitch> tSwitch;
 		public int tNum;
 		public int maxTNum;
@@ -15,6 +13,7 @@ namespace TeacherSearcher
 		public Label lb1 = new Label();
 		public Label lb2 = new Label();
 		public Label lb3 = new Label();
+
 		private MainMenu mainMenu1;
 		private System.ComponentModel.IContainer components;
 		private MenuItem menuItem1;
@@ -45,32 +44,16 @@ namespace TeacherSearcher
 			flp.AutoScroll = true;
 
 			// スイッチ
-			teacher = new List<Teacher>();
 			tSwitch = new List<TeacherSwitch>();
-			teacher.Add( new Teacher( "fuga" ) );
-			maxTNum++;
-			tSwitch.Add( new TeacherSwitch( teacher[tNum].name ) );
-			//t = new Teacher( "fuga" );
-			//ts = new TeacherSwitch( t.name );
-			tSwitch[tNum].isExist = teacher[tNum].isExist;
-			tSwitch[tNum].RefreshEvent += delegate ( object sender, EventArgs e )
-			{
-				teacher[tNum].isExist = tSwitch[tNum].isExist;
-				lb2.Text = (teacher[tNum].isExist) ? "居室状況:Exist" : "居室状況:Out";
-			};
-			tSwitch[tNum].Show();
+			//this.addTeacher( "fuga" );
 
-			lb1.Text = teacher[tNum].name;
-			lb1.Text += "先生";
+			lb1.Text = "先生";
 			lb1.Parent = flp;
 
-			lb2.Text = "居室状況:";
-			lb2.Text += teacher[tNum].isExist;
+			lb2.Text = "居室状況";
 			lb2.Parent = flp;
 
-			lb3.Text = "面会希望者:";
-			lb3.Text += teacher[tNum].resMan;
-			lb3.Text += "人";
+			lb3.Text = "面会希望者";
 			lb3.Parent = flp;
 			
 			Button bt1 = new Button();
@@ -91,11 +74,30 @@ namespace TeacherSearcher
 			flp.Parent = this;
 		}
 
+		private void reShow()
+		{
+			lb1.Text = tSwitch[tNum].name + "先生";
+			lb2.Text = (tSwitch[maxTNum].isExist) ? "居室状況:Exist" : "居室状況:Out";
+			lb3.Text = "面会希望者:" + tSwitch[tNum].resMan + "人";
+		}
+
+		private void addTeacher( string name )
+		{
+			maxTNum++;
+			tSwitch.Add( new TeacherSwitch( name ) );
+			tSwitch[maxTNum].RefreshEvent += delegate ( object sende, EventArgs ea )
+			{
+				lb2.Text = (tSwitch[maxTNum].isExist) ? "居室状況:Exist" : "居室状況:Out";
+			};
+			tSwitch[maxTNum].Show();
+		}
+
 		private void ClickUpButtonEvent( Object sender, EventArgs e )
 		{
 			//
 			tNum++;
 			if( tNum > maxTNum ) tNum = 0;
+			this.reShow();
 		}
 
 		private void ClickDownButtonEvent( Object sender, EventArgs e )
@@ -103,21 +105,25 @@ namespace TeacherSearcher
 			//
 			tNum--;
 			if( tNum < 0 ) tNum = maxTNum;
+			this.reShow();
 		}
 
 		private void ClickSelectButtonEvent( Object sender, EventArgs e )
 		{
 			//
-			teacher[tNum].resMan++;
+			tSwitch[tNum].resMan++;
 
-			lb3.Text = "面会希望者:";
-			lb3.Text += teacher[tNum].resMan;
-			lb3.Text += "人";
+			lb3.Text = "面会希望者:" + tSwitch[tNum].resMan + "人";
 		}
 
 		private void addMenuItem_Click( object sender, EventArgs e )
 		{
-			MessageBox.Show( "added" );
+			AddTeacherForm at = new AddTeacherForm();
+			at.RefreshEvent += delegate ( object ob, EventArgs ea )
+			{
+				this.addTeacher( at.tb.Text );
+			};
+			at.Show();
 		}
 
 		private void InitializeComponent()

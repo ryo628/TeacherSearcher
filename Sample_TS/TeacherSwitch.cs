@@ -5,14 +5,20 @@ namespace TeacherSearcher
 {
 	class TeacherSwitch : Form
 	{
+		public string name { get; set; }
 		public bool isExist { get; set; }
+		public int resMan { get; set; }
 
 		public delegate void RefreshEventHandler( object sender, EventArgs e );
 		public event RefreshEventHandler RefreshEvent;
 
 		public TeacherSwitch()
 		{
-			this.Text = "TacherSwitch";
+			this.name = "hoge";
+			this.isExist = true;
+			this.resMan = 0;
+
+			this.Text = this.name + "'s Switch";
 			this.Width = 75;
 			this.Height = 100;
 
@@ -37,7 +43,11 @@ namespace TeacherSearcher
 
 		public TeacherSwitch( string name )
 		{
-			this.Text = "TacherSwitch";
+			this.name = name;
+			this.isExist = true;
+			this.resMan = 0;
+
+			this.Text = this.name + "'s Switch";
 			this.Width = 100;
 			this.Height = 150;
 
@@ -47,7 +57,7 @@ namespace TeacherSearcher
 			flp.AutoScroll = true;
 
 			Label lb1 = new Label();
-			lb1.Text = name;
+			lb1.Text = this.name;
 			lb1.Text += "先生";
 			lb1.Parent = flp;
 
